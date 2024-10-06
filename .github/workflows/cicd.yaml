@@ -33,6 +33,9 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         context: .
+        push: true
+        tags: ${{ secrets.DOCKER_USERNAME }}/cicd:latest
+        
 
 name: CI/CD Pipeline  # Name of the workflow
 
